@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong></p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('f114fa87a8d79e664142cd2a4f557629');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        imageUrl:
+          'https://aktdltek.github.io/photokakaoverynice.js/낚시사진.png',
+        link: {
+          mobileWebUrl: 'https://kakaophotoverynice.netlify.app',
+          webUrl: 'https://kakaophotoverynice.netlify.app',
+        },
+      },
+    })
+  }
+</script>
+  </body>
+</html>
