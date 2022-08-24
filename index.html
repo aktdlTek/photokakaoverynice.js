@@ -13,28 +13,10 @@
 <script type="text/javascript">
  Kakao.init('a7c8b10075595c05dc071ce319e39f6c');
   function sendLink() {
-    Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: ' ',
-        description: ' ',
-        imageUrl:
-          'https://aktdltek.github.io/photokakaoverynice.js/낚시사진.jpg',
-        link: {
-          mobileWebUrl: 'https://kakaophotoverynice.netlify.app',
-          webUrl: 'https://kakaophotoverynice.netlify.app',
-        },
-      },
-      buttons: [
-        {
-          title: ' ',
-          link: {
-            mobileWebUrl: 'https://kakaophotoverynice.netlify.app',
-            webUrl: 'https://kakaophotoverynice.netlify.app',
-          },
-        },
-      ],
-    })
+    Kakao.Share.createCustomButton({
+  container: 'https://app.netlify.com/sites/kakaophotoverynice/overview',
+  templateId: ${81970}
+});
   }
 </script>
   </body>
